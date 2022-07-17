@@ -2,7 +2,7 @@
 //  enurytimeUITests.swift
 //  enurytimeUITests
 //
-//  Created by sesang on 2021/09/04.
+//  Created by ybchar on 2021/09/04.
 //
 
 import XCTest
