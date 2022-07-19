@@ -13,8 +13,8 @@
 		065D795126E3A4B30066F8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065D794F26E3A4B30066F8D4 /* Main.storyboard */; };
 		065D795326E3A4B50066F8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065D795226E3A4B50066F8D4 /* Assets.xcassets */; };
 		065D795626E3A4B50066F8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065D795426E3A4B50066F8D4 /* LaunchScreen.storyboard */; };
-		065D796126E3A4B50066F8D4 /* enurytimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D796026E3A4B50066F8D4 /* enurytimeTests.swift */; };
-		065D796C26E3A4B60066F8D4 /* enurytimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D796B26E3A4B60066F8D4 /* enurytimeUITests.swift */; };
+		065D796126E3A4B50066F8D4 /* everytimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D796026E3A4B50066F8D4 /* everytimeTests.swift */; };
+		065D796C26E3A4B60066F8D4 /* everytimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D796B26E3A4B60066F8D4 /* everytimeUITests.swift */; };
 		5A474CE52883EAF2007A28A2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE42883EAF2007A28A2 /* UIColor+Extension.swift */; };
 		5A474CE72883ED3E007A28A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE62883ED3E007A28A2 /* LoginViewController.swift */; };
 		5A474CE928856079007A28A2 /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE828856079007A28A2 /* InsertTextField.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		065D794626E3A4B30066F8D4 /* enurytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = enurytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D794626E3A4B30066F8D4 /* everytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = everytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065D794926E3A4B30066F8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065D794B26E3A4B30066F8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		065D794D26E3A4B30066F8D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,11 +48,11 @@
 		065D795226E3A4B50066F8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		065D795526E3A4B50066F8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		065D795726E3A4B50066F8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		065D795C26E3A4B50066F8D4 /* enurytimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enurytimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		065D796026E3A4B50066F8D4 /* enurytimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enurytimeTests.swift; sourceTree = "<group>"; };
+		065D795C26E3A4B50066F8D4 /* everytimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = everytimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D796026E3A4B50066F8D4 /* everytimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everytimeTests.swift; sourceTree = "<group>"; };
 		065D796226E3A4B50066F8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		065D796726E3A4B60066F8D4 /* enurytimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enurytimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		065D796B26E3A4B60066F8D4 /* enurytimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enurytimeUITests.swift; sourceTree = "<group>"; };
+		065D796726E3A4B60066F8D4 /* everytimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = everytimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D796B26E3A4B60066F8D4 /* everytimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everytimeUITests.swift; sourceTree = "<group>"; };
 		065D796D26E3A4B60066F8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A474CE42883EAF2007A28A2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5A474CE62883ED3E007A28A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		065D793D26E3A4B20066F8D4 = {
 			isa = PBXGroup;
 			children = (
-				065D794826E3A4B30066F8D4 /* enurytime */,
-				065D795F26E3A4B50066F8D4 /* enurytimeTests */,
-				065D796A26E3A4B60066F8D4 /* enurytimeUITests */,
+				065D794826E3A4B30066F8D4 /* everytime */,
+				065D795F26E3A4B50066F8D4 /* everytimeTests */,
+				065D796A26E3A4B60066F8D4 /* everytimeUITests */,
 				065D794726E3A4B30066F8D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,14 +99,14 @@
 		065D794726E3A4B30066F8D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				065D794626E3A4B30066F8D4 /* enurytime.app */,
-				065D795C26E3A4B50066F8D4 /* enurytimeTests.xctest */,
-				065D796726E3A4B60066F8D4 /* enurytimeUITests.xctest */,
+				065D794626E3A4B30066F8D4 /* everytime.app */,
+				065D795C26E3A4B50066F8D4 /* everytimeTests.xctest */,
+				065D796726E3A4B60066F8D4 /* everytimeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		065D794826E3A4B30066F8D4 /* enurytime */ = {
+		065D794826E3A4B30066F8D4 /* everytime */ = {
 			isa = PBXGroup;
 			children = (
 				065D794926E3A4B30066F8D4 /* AppDelegate.swift */,
@@ -122,33 +122,33 @@
 				5A474CEC288699CD007A28A2 /* MainViewController.swift */,
 				5A474CEE2886A407007A28A2 /* MainCell.swift */,
 			);
-			path = enurytime;
+			path = everytime;
 			sourceTree = "<group>";
 		};
-		065D795F26E3A4B50066F8D4 /* enurytimeTests */ = {
+		065D795F26E3A4B50066F8D4 /* everytimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				065D796026E3A4B50066F8D4 /* enurytimeTests.swift */,
+				065D796026E3A4B50066F8D4 /* everytimeTests.swift */,
 				065D796226E3A4B50066F8D4 /* Info.plist */,
 			);
-			path = enurytimeTests;
+			path = everytimeTests;
 			sourceTree = "<group>";
 		};
-		065D796A26E3A4B60066F8D4 /* enurytimeUITests */ = {
+		065D796A26E3A4B60066F8D4 /* everytimeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				065D796B26E3A4B60066F8D4 /* enurytimeUITests.swift */,
+				065D796B26E3A4B60066F8D4 /* everytimeUITests.swift */,
 				065D796D26E3A4B60066F8D4 /* Info.plist */,
 			);
-			path = enurytimeUITests;
+			path = everytimeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		065D794526E3A4B30066F8D4 /* enurytime */ = {
+		065D794526E3A4B30066F8D4 /* everytime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 065D797026E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytime" */;
+			buildConfigurationList = 065D797026E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytime" */;
 			buildPhases = (
 				065D794226E3A4B30066F8D4 /* Sources */,
 				065D794326E3A4B30066F8D4 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = enurytime;
+			name = everytime;
 			productName = enurytime;
-			productReference = 065D794626E3A4B30066F8D4 /* enurytime.app */;
+			productReference = 065D794626E3A4B30066F8D4 /* everytime.app */;
 			productType = "com.apple.product-type.application";
 		};
-		065D795B26E3A4B50066F8D4 /* enurytimeTests */ = {
+		065D795B26E3A4B50066F8D4 /* everytimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 065D797326E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytimeTests" */;
+			buildConfigurationList = 065D797326E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytimeTests" */;
 			buildPhases = (
 				065D795826E3A4B50066F8D4 /* Sources */,
 				065D795926E3A4B50066F8D4 /* Frameworks */,
@@ -176,14 +176,14 @@
 			dependencies = (
 				065D795E26E3A4B50066F8D4 /* PBXTargetDependency */,
 			);
-			name = enurytimeTests;
+			name = everytimeTests;
 			productName = enurytimeTests;
-			productReference = 065D795C26E3A4B50066F8D4 /* enurytimeTests.xctest */;
+			productReference = 065D795C26E3A4B50066F8D4 /* everytimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		065D796626E3A4B60066F8D4 /* enurytimeUITests */ = {
+		065D796626E3A4B60066F8D4 /* everytimeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 065D797626E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytimeUITests" */;
+			buildConfigurationList = 065D797626E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytimeUITests" */;
 			buildPhases = (
 				065D796326E3A4B60066F8D4 /* Sources */,
 				065D796426E3A4B60066F8D4 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				065D796926E3A4B60066F8D4 /* PBXTargetDependency */,
 			);
-			name = enurytimeUITests;
+			name = everytimeUITests;
 			productName = enurytimeUITests;
-			productReference = 065D796726E3A4B60066F8D4 /* enurytimeUITests.xctest */;
+			productReference = 065D796726E3A4B60066F8D4 /* everytimeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 065D794126E3A4B20066F8D4 /* Build configuration list for PBXProject "enurytime" */;
+			buildConfigurationList = 065D794126E3A4B20066F8D4 /* Build configuration list for PBXProject "everytime" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				065D794526E3A4B30066F8D4 /* enurytime */,
-				065D795B26E3A4B50066F8D4 /* enurytimeTests */,
-				065D796626E3A4B60066F8D4 /* enurytimeUITests */,
+				065D794526E3A4B30066F8D4 /* everytime */,
+				065D795B26E3A4B50066F8D4 /* everytimeTests */,
+				065D796626E3A4B60066F8D4 /* everytimeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065D796126E3A4B50066F8D4 /* enurytimeTests.swift in Sources */,
+				065D796126E3A4B50066F8D4 /* everytimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065D796C26E3A4B60066F8D4 /* enurytimeUITests.swift in Sources */,
+				065D796C26E3A4B60066F8D4 /* everytimeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +305,12 @@
 /* Begin PBXTargetDependency section */
 		065D795E26E3A4B50066F8D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 065D794526E3A4B30066F8D4 /* enurytime */;
+			target = 065D794526E3A4B30066F8D4 /* everytime */;
 			targetProxy = 065D795D26E3A4B50066F8D4 /* PBXContainerItemProxy */;
 		};
 		065D796926E3A4B60066F8D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 065D794526E3A4B30066F8D4 /* enurytime */;
+			target = 065D794526E3A4B30066F8D4 /* everytime */;
 			targetProxy = 065D796826E3A4B60066F8D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,12 +458,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPB224HL3X;
-				INFOPLIST_FILE = enurytime/Info.plist;
+				INFOPLIST_FILE = everytime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytime;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,12 +477,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPB224HL3X;
-				INFOPLIST_FILE = enurytime/Info.plist;
+				INFOPLIST_FILE = everytime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytime;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,18 +496,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GDRWN9V7N;
-				INFOPLIST_FILE = enurytimeTests/Info.plist;
+				INFOPLIST_FILE = everytimeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/enurytime.app/enurytime";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/everytime.app/everytime";
 			};
 			name = Debug;
 		};
@@ -518,18 +518,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GDRWN9V7N;
-				INFOPLIST_FILE = enurytimeTests/Info.plist;
+				INFOPLIST_FILE = everytimeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/enurytime.app/enurytime";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/everytime.app/everytime";
 			};
 			name = Release;
 		};
@@ -539,17 +539,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPB224HL3X;
-				INFOPLIST_FILE = enurytimeUITests/Info.plist;
+				INFOPLIST_FILE = everytimeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytimeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytimeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = enurytime;
+				TEST_TARGET_NAME = everytime;
 			};
 			name = Debug;
 		};
@@ -559,24 +559,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPB224HL3X;
-				INFOPLIST_FILE = enurytimeUITests/Info.plist;
+				INFOPLIST_FILE = everytimeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.enurytimeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ybcha.everytimeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = enurytime;
+				TEST_TARGET_NAME = everytime;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		065D794126E3A4B20066F8D4 /* Build configuration list for PBXProject "enurytime" */ = {
+		065D794126E3A4B20066F8D4 /* Build configuration list for PBXProject "everytime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				065D796E26E3A4B60066F8D4 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		065D797026E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytime" */ = {
+		065D797026E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				065D797126E3A4B60066F8D4 /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		065D797326E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytimeTests" */ = {
+		065D797326E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				065D797426E3A4B60066F8D4 /* Debug */,
@@ -603,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		065D797626E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "enurytimeUITests" */ = {
+		065D797626E3A4B60066F8D4 /* Build configuration list for PBXNativeTarget "everytimeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				065D797726E3A4B60066F8D4 /* Debug */,

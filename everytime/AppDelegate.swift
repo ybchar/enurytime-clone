@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  enurytime
+//  everytime
 //
 //  Created by 차윤범 on 2021/09/04.
 //
