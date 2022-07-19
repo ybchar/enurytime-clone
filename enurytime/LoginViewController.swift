@@ -48,8 +48,9 @@ final class LoginViewController: UIViewController{
         let idText = InsertTextField()
         idText.insertX = 16
         idText.translatesAutoresizingMaskIntoConstraints = false
-        idText.placeholder = "아이디"
+        idText.attributedPlaceholder = NSAttributedString(string: "아이디", attributes: [.foregroundColor: UIColor.systemGray])
         idText.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        idText.textColor = UIColor.black
         idText.backgroundColor = UIColor(r: 227, g: 227, b: 229)
         idText.layer.cornerRadius = 20
         // true로 해야 radius가 정상적으로 작동
@@ -61,8 +62,9 @@ final class LoginViewController: UIViewController{
         let passwordText = InsertTextField()
         passwordText.insertX = 16
         passwordText.translatesAutoresizingMaskIntoConstraints = false
-        passwordText.placeholder = "비밀번호"
+        passwordText.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor.systemGray])
         passwordText.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        passwordText.textColor = UIColor.black
         passwordText.backgroundColor = UIColor(r: 227, g: 227, b: 229)
         passwordText.layer.cornerRadius = 20
         // 패스워드는 안보이도록
@@ -109,6 +111,7 @@ final class LoginViewController: UIViewController{
         return stackView
     }()
     
+    private var centerYContraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,12 +135,15 @@ final class LoginViewController: UIViewController{
         self.container.setCustomSpacing(50, after: self.titleLabelView)
         self.container.setCustomSpacing(9, after: self.idTextField)
         self.container.setCustomSpacing(9, after: self.passwordTextField)
-        self.container.setCustomSpacing(30, after: self.loginButton)
+        self.container.setCustomSpacing(40, after: self.loginButton)
+        
+        // 전체를 위를 올리고, 내리고 싶을 경우 뷰의 중앙 조건을 해결해야 한다.
+        let constraint = self.container.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -25)
         
         NSLayoutConstraint.activate([
             self.container.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
             self.container.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50),
-            self.container.centerYAnchor.constraint(equalTo:  self.view.centerYAnchor, constant: -25),
+            constraint,
              
             self.titleImageView.heightAnchor.constraint(equalToConstant: 60),
             self.titleImageView.widthAnchor.constraint(equalToConstant: 60),
@@ -157,10 +163,86 @@ final class LoginViewController: UIViewController{
             
             
         ])
+        // 로그인 버튼 터치할 시 onPressLoginButton 이동
+        self.loginButton.addTarget(self, action: #selector(onPressLoginButton), for: .touchUpInside)
+        
+        self.centerYContraint = constraint
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
+        self.view.addGestureRecognizer(tapGesture)
         
     }
     
-   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+        
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+        
     
+    
+    @objc func keyboardWillShow(notification: Notification){
+        
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
+        else{
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.height
+        
+        // animation
+        UIView.animate(withDuration: duration){
+            [self.titleImageView, self.descriptionLabelView, self.titleLabelView, self.signUpButton].forEach {
+                view in
+                view.alpha = 0
+            }
+            self.centerYContraint?.constant = -keyboardHeight
+            self.view.layoutIfNeeded()
+        }
+        // 제약조건에 상수를 -keyboardHeigth 만큼 올린다.
+        //self.centerYContraint?.constant = -keyboardHeight
+        
+    }
+    
+    @objc func keyboardWillHide(notification: Notification){
+    
+        guard let userInfo = notification.userInfo,
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
+        else{
+            return
+        }
+        UIView.animate(withDuration: duration){
+            [self.titleImageView, self.descriptionLabelView, self.titleLabelView, self.signUpButton].forEach {
+                view in
+                view.alpha = 1
+            }
+            self.centerYContraint?.constant = 0
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    
+    @objc func viewDidTap(gesture: UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+    
+    @objc func onPressLoginButton(sender: Any) {
+        let nav = UINavigationController()
+        nav.modalPresentationStyle = .fullScreen
+        nav.navigationBar.barTintColor = .white
+        nav.navigationBar.tintColor = UIColor(w: 42)
+        let controller = MainViewController()
+        nav.viewControllers = [controller]
+        self.present(nav, animated: true, completion: nil)
+    }
     
 }

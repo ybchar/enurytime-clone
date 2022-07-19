@@ -18,6 +18,8 @@
 		5A474CE52883EAF2007A28A2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE42883EAF2007A28A2 /* UIColor+Extension.swift */; };
 		5A474CE72883ED3E007A28A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE62883ED3E007A28A2 /* LoginViewController.swift */; };
 		5A474CE928856079007A28A2 /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CE828856079007A28A2 /* InsertTextField.swift */; };
+		5A474CED288699CD007A28A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CEC288699CD007A28A2 /* MainViewController.swift */; };
+		5A474CEF2886A407007A28A2 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CEE2886A407007A28A2 /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		5A474CE42883EAF2007A28A2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5A474CE62883ED3E007A28A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A474CE828856079007A28A2 /* InsertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextField.swift; sourceTree = "<group>"; };
+		5A474CEC288699CD007A28A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5A474CEE2886A407007A28A2 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				5A474CE42883EAF2007A28A2 /* UIColor+Extension.swift */,
 				5A474CE62883ED3E007A28A2 /* LoginViewController.swift */,
 				5A474CE828856079007A28A2 /* InsertTextField.swift */,
+				5A474CEC288699CD007A28A2 /* MainViewController.swift */,
+				5A474CEE2886A407007A28A2 /* MainCell.swift */,
 			);
 			path = enurytime;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				5A474CE72883ED3E007A28A2 /* LoginViewController.swift in Sources */,
 				5A474CE928856079007A28A2 /* InsertTextField.swift in Sources */,
 				5A474CE52883EAF2007A28A2 /* UIColor+Extension.swift in Sources */,
+				5A474CEF2886A407007A28A2 /* MainCell.swift in Sources */,
+				5A474CED288699CD007A28A2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
