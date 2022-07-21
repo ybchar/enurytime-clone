@@ -56,34 +56,58 @@ final class MainCell: UITableViewCell{
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .white
+    private let reactionView = ReactionView()
        
-        self.contentView.addSubview(self.nicknameContainer)
-        self.contentView.addSubview(self.titleLabel)
-        self.nicknameContainer.addArrangedSubview(self.profileImageView)
-        self.nicknameContainer.addArrangedSubview(self.nicknameLabel)
-        self.nicknameContainer.addArrangedSubview(self.timeLabel)
-        
-        self.nicknameContainer.translatesAutoresizingMaskIntoConstraints = false
-        self.profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            self.nicknameContainer.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 15),
-            self.nicknameContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
-            self.nicknameContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
-            self.nicknameContainer.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, constant: 24),
+    private let separator: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(w: 237)
+        return view
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+            super.init(style: style, reuseIdentifier: reuseIdentifier)
+            self.backgroundColor = .white
             
-            self.profileImageView.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, constant: 24),
-            self.profileImageView.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, constant: 24),
+            self.contentView.addSubview(self.nicknameContainer)
+            self.nicknameContainer.addArrangedSubview(self.profileImageView)
+            self.nicknameContainer.addArrangedSubview(self.nicknameLabel)
+            self.nicknameContainer.addArrangedSubview(self.timeLabel)
+            self.contentView.addSubview(self.titleLabel)
+            self.contentView.addSubview(self.separator)
+            self.contentView.addSubview(self.reactionView)
+            self.nicknameContainer.translatesAutoresizingMaskIntoConstraints = false
+            self.profileImageView.translatesAutoresizingMaskIntoConstraints = false
+            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.reactionView.translatesAutoresizingMaskIntoConstraints = false
+            self.separator.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                self.nicknameContainer.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 15),
+                self.nicknameContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
+                self.nicknameContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
+                self.nicknameContainer.heightAnchor.constraint(equalToConstant: 24),
+                self.profileImageView.heightAnchor.constraint(equalToConstant: 24),
+                self.profileImageView.widthAnchor.constraint(equalToConstant: 24),
+                self.titleLabel.topAnchor.constraint(equalTo: self.nicknameContainer.bottomAnchor, constant: 4),
+                self.titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
+                self.titleLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
+                self.titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -24),
+                self.separator.heightAnchor.constraint(equalToConstant: 1),
+                
+                self.separator.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
+                self.separator.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8),
+                self.separator.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+                
+                
+                self.reactionView.heightAnchor.constraint(equalToConstant: 16),
+                self.reactionView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -30),
+                self.reactionView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -6),
+                
+            ])
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.nicknameContainer.bottomAnchor, constant: 4),
-            self.titleLabel.leadingAnchor.constraint(equalTo: self.nicknameContainer.leadingAnchor, constant: 24),
-            self.titleLabel.trailingAnchor.constraint(equalTo: self.nicknameContainer.trailingAnchor, constant: -24),
-            self.titleLabel.bottomAnchor.constraint(equalTo: self.nicknameContainer.bottomAnchor, constant: -24),
-        ])
+        }
+    
+    func setData(text: String) {
+           self.titleLabel.text = text
     }
     
     required init?(coder: NSCoder) {
