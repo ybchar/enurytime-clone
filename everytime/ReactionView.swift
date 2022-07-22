@@ -4,12 +4,13 @@
 //
 //  Created by 차윤범 on 2022/07/21.
 //
-
+// 좋아요 댓글 View
 import Foundation
 import UIKit
 
 final class ReactionView: UIStackView {
     
+    // 좋아요
     private let likeButton: UIButton = {
         let button = UIButton()
         button.setTitle("0", for: .normal)
@@ -23,6 +24,7 @@ final class ReactionView: UIStackView {
         return button
     }()
     
+    // 댓글
     private let commentButton: UIButton = {
         let button = UIButton()
         button.setTitle("3", for: .normal)

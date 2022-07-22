@@ -56,6 +56,7 @@ final class MainCell: UITableViewCell{
         return label
     }()
     
+    // 좋아요 댓글 View
     private let reactionView = ReactionView()
        
     private let separator: UIView = {
@@ -72,31 +73,35 @@ final class MainCell: UITableViewCell{
             self.nicknameContainer.addArrangedSubview(self.profileImageView)
             self.nicknameContainer.addArrangedSubview(self.nicknameLabel)
             self.nicknameContainer.addArrangedSubview(self.timeLabel)
+            
             self.contentView.addSubview(self.titleLabel)
             self.contentView.addSubview(self.separator)
             self.contentView.addSubview(self.reactionView)
+            
             self.nicknameContainer.translatesAutoresizingMaskIntoConstraints = false
             self.profileImageView.translatesAutoresizingMaskIntoConstraints = false
             self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
             self.reactionView.translatesAutoresizingMaskIntoConstraints = false
             self.separator.translatesAutoresizingMaskIntoConstraints = false
+        
             NSLayoutConstraint.activate([
+                self.nicknameContainer.heightAnchor.constraint(equalToConstant: 24),
                 self.nicknameContainer.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 15),
                 self.nicknameContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
                 self.nicknameContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
-                self.nicknameContainer.heightAnchor.constraint(equalToConstant: 24),
+                
                 self.profileImageView.heightAnchor.constraint(equalToConstant: 24),
                 self.profileImageView.widthAnchor.constraint(equalToConstant: 24),
+                
                 self.titleLabel.topAnchor.constraint(equalTo: self.nicknameContainer.bottomAnchor, constant: 4),
                 self.titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
                 self.titleLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
                 self.titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -24),
-                self.separator.heightAnchor.constraint(equalToConstant: 1),
                 
+                self.separator.heightAnchor.constraint(equalToConstant: 1),
                 self.separator.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
                 self.separator.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8),
                 self.separator.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-                
                 
                 self.reactionView.heightAnchor.constraint(equalToConstant: 16),
                 self.reactionView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -30),
@@ -106,8 +111,8 @@ final class MainCell: UITableViewCell{
             
         }
     
-    func setData(text: String) {
-           self.titleLabel.text = text
+    func setupData(data: String) {
+           self.titleLabel.text = data
     }
     
     required init?(coder: NSCoder) {
