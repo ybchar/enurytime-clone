@@ -48,9 +48,14 @@ final class MainViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = ""
+        self.navigationItem.titleView = NavigationTitleView()
+        
         self.tableView.separatorStyle = .none
         self.tableView.register(MainCell.self, forCellReuseIdentifier: "MainCell")
         self.tableView.reloadData()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "more_title"), style: .plain, target: self, action: nil)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

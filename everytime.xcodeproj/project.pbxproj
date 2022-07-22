@@ -21,6 +21,7 @@
 		5A474CED288699CD007A28A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CEC288699CD007A28A2 /* MainViewController.swift */; };
 		5A474CEF2886A407007A28A2 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A474CEE2886A407007A28A2 /* MainCell.swift */; };
 		5AF98F1728895B1F0022975A /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF98F1628895B1F0022975A /* ReactionView.swift */; };
+		5AF98F19288A4CD80022975A /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF98F18288A4CD70022975A /* NavigationTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5A474CEC288699CD007A28A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5A474CEE2886A407007A28A2 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		5AF98F1628895B1F0022975A /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
+		5AF98F18288A4CD70022975A /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				5A474CEC288699CD007A28A2 /* MainViewController.swift */,
 				5A474CEE2886A407007A28A2 /* MainCell.swift */,
 				5AF98F1628895B1F0022975A /* ReactionView.swift */,
+				5AF98F18288A4CD70022975A /* NavigationTitleView.swift */,
 			);
 			path = everytime;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				5A474CE72883ED3E007A28A2 /* LoginViewController.swift in Sources */,
 				5A474CE928856079007A28A2 /* InsertTextField.swift in Sources */,
 				5A474CE52883EAF2007A28A2 /* UIColor+Extension.swift in Sources */,
+				5AF98F19288A4CD80022975A /* NavigationTitleView.swift in Sources */,
 				5A474CEF2886A407007A28A2 /* MainCell.swift in Sources */,
 				5A474CED288699CD007A28A2 /* MainViewController.swift in Sources */,
 			);
