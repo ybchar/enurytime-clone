@@ -114,4 +114,8 @@ final class DetailContentView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    func setupData(text: String) {
+//        self.titleLabel.text = text
+//    }
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 final class MainViewController : UITableViewController {
     
     
-    private let texts: Array = [
+    public let texts: Array = [
         """
         쿠팡 채용 관심 있으신 분 지원 부탁드립니다
         http://saram.in/s/7QR214Gw3
@@ -67,7 +67,6 @@ final class MainViewController : UITableViewController {
         let text = texts[indexPath.item]
         cell.setupData(data: text)
         return cell
-        
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,4 +74,12 @@ final class MainViewController : UITableViewController {
         self.navigationController?.pushViewController(detailViewController, animated: true)
           
     }
+    
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let view = tableView.dequeueReusableCell(withIdentifier: "DetailContentView", for: indexPath) as! DetailContentView
+//        view.setupData(text: texts[indexPath.item])
+//        return view
+//    }
+    
 }

@@ -32,7 +32,7 @@ final class DetailViewController: UIViewController, UITableViewDataSource, UITab
     
     
     private let replyTextView = ReplyTextView()
-
+    private let mainViewController = MainViewController()
     
     private let tableView = UITableView(frame: .zero, style: .grouped)
     
@@ -46,6 +46,7 @@ final class DetailViewController: UIViewController, UITableViewDataSource, UITab
 //        self.tableView.setContentHuggingPriority(.defaultLow, for: .vertical)
 //
 //        self.replyTextView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.replyTextView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -55,10 +56,11 @@ final class DetailViewController: UIViewController, UITableViewDataSource, UITab
             self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
           
             self.replyTextView.topAnchor.constraint(equalTo: self.tableView.bottomAnchor, constant: 8),
-            
             self.replyTextView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 8),
             self.replyTextView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -8),
-            self.replyTextView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+            self.replyTextView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
+            
+            //self.replyTextView.heightAnchor.constraint(equalToConstant: 44)
             
         ])
         self.tableView.backgroundColor = .white
@@ -80,12 +82,13 @@ final class DetailViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailReplyCell", for: indexPath) as! DetailReplyCell
-        // cell.setupData(text: self.texts[indexPath.item])
+        cell.setupData(text: self.texts[indexPath.item])
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DetailContentView") as! DetailContentView
+       
         return view
     }
     

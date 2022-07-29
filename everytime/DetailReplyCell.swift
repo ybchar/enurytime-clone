@@ -79,6 +79,7 @@ final class DetailReplyCell : UITableViewCell {
         
     }()
     
+    
     override init(style : UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -107,5 +108,9 @@ final class DetailReplyCell : UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupData(text: String) {
+        self.titleLabel.text = text
     }
 }

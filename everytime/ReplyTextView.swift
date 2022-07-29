@@ -10,7 +10,7 @@ import UIKit
 
 final class ReplyTextView: UIView {
     
-    
+    // 익명 체크 버튼
     private let nicknameButton: UIButton = {
         let button = UIButton()
         button.setTitle("익명", for: .normal)
@@ -22,6 +22,7 @@ final class ReplyTextView: UIView {
         return button
     }()
     
+    // 댓글 텍스트 뷰
     private let textView: UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 14, weight: .medium)
@@ -32,18 +33,21 @@ final class ReplyTextView: UIView {
         return textView
     }()
     
+    // 전송 버튼
     private let sendButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "reply_send_icon"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
-
+    
+    // 댓글을 입력하세요.
     private let placeholderLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.textColor = UIColor(w: 168)
         label.text = "댓글을 입력하세요."
+        // 고유 크기보다 커지는 것을 방지하는 우선 순위를 설정
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return label
     }()
@@ -61,14 +65,9 @@ final class ReplyTextView: UIView {
         super.init(frame: frame)
         
         self.addSubview(self.backgroundView)
-  
-        
-  
         self.addSubview(self.nicknameButton)
         self.addSubview(self.placeholderLabel)
-        
         self.addSubview(self.textView)
-        
         self.addSubview(self.sendButton)
         
         
@@ -94,28 +93,26 @@ final class ReplyTextView: UIView {
             self.nicknameButton.heightAnchor.constraint(equalToConstant: 24),
             self.nicknameButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12),
             
-            
-            
             self.sendButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             self.sendButton.heightAnchor.constraint(equalToConstant: 24),
             self.sendButton.widthAnchor.constraint(equalToConstant: 24),
-            
             self.sendButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12),
+            
             self.textView.leadingAnchor.constraint(equalTo: self.nicknameButton.trailingAnchor, constant: 12),
             self.textView.trailingAnchor.constraint(equalTo: self.sendButton.leadingAnchor, constant: -12),
-    
             self.textView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
             self.placeholderLabel.topAnchor.constraint(equalTo: self.textView.topAnchor),
-            
             self.placeholderLabel.leadingAnchor.constraint(equalTo: self.textView.leadingAnchor),
             self.placeholderLabel.trailingAnchor.constraint(equalTo: self.textView.trailingAnchor),
             self.placeholderLabel.bottomAnchor.constraint(equalTo: self.textView.bottomAnchor),
             
             self.heightAnchor.constraint(equalToConstant: 48),
+            // 한 줄의 높이를 알 수 없다, 폰트의 높이를 가져와 중앙에 놓을 수 있도록 한다.
             self.textView.heightAnchor.constraint(equalToConstant: self.textView.font!.lineHeight)
         ])
-     
+        
+        // text를 작성하면 placeHolder 텍스트가 없어짐
         self.textView.delegate = self
         
     }
@@ -127,10 +124,13 @@ final class ReplyTextView: UIView {
 }
 
 
+// TextViewDelegate 확장
 extension ReplyTextView: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
+        // textView 값을 가져와서
         let text = textView.text as NSString
-        self.placeholderLabel.isHidden = text.length != 0
+        // 길이가 0이 아니면 없어진다.
+        self.placeholderLabel.isHidden = text.length > 0
     }
 }
