@@ -67,6 +67,8 @@ final class DetailReplyCell : UITableViewCell {
         
     }()
     
+    private let replyReactionView = ReplyReactionView()
+    
     
     private let container : UIStackView = {
         let stackView = UIStackView()
@@ -89,7 +91,7 @@ final class DetailReplyCell : UITableViewCell {
         
         self.nicknameContainer.addArrangedSubview(self.profileImageView)
         self.nicknameContainer.addArrangedSubview(self.nicknameLabel)
-        
+        self.nicknameContainer.addArrangedSubview(self.replyReactionView)
         
         NSLayoutConstraint.activate([
             self.container.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8),
